@@ -1,0 +1,51 @@
+uuid: 7e56042d-a897-4680-8a59-57976e0244a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe.body
+    - node.type.recipe
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          3f61f0ad-4a7b-4c76-8efc-2799fb057d85:
+            uuid: 3f61f0ad-4a7b-4c76-8efc-2799fb057d85
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
