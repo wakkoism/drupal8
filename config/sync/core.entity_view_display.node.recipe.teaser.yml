@@ -4,12 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.recipe.body
     - node.type.recipe
   module:
     - layout_builder
     - layout_discovery
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -17,36 +15,12 @@ third_party_settings:
       -
         layout_id: layout_onecol
         layout_settings: {  }
-        components:
-          7c83819a-d5b8-432b-a8a3-dc3cee583363:
-            uuid: 7c83819a-d5b8-432b-a8a3-dc3cee583363
-            region: content
-            configuration:
-              id: 'field_block:node:recipe:body'
-              label_display: ''
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
+        components: {  }
 id: node.recipe.teaser
 targetEntityType: node
 bundle: recipe
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     region: content

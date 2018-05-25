@@ -3,9 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.recipe.body
+    - field.field.node.recipe.field_description
+    - field.field.node.recipe.field_image
+    - field.field.node.recipe.field_recipe_cooktime
+    - field.field.node.recipe.field_recipe_ingredients
+    - field.field.node.recipe.field_recipe_instructions
+    - field.field.node.recipe.field_recipe_preptime
+    - field.field.node.recipe.field_recipe_yield
     - node.type.recipe
   module:
+    - image
     - layout_builder
     - layout_discovery
     - text
@@ -17,32 +24,180 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          3f61f0ad-4a7b-4c76-8efc-2799fb057d85:
-            uuid: 3f61f0ad-4a7b-4c76-8efc-2799fb057d85
+          fb8f086c-41dd-4c6e-b849-13afcc308fe2:
+            uuid: fb8f086c-41dd-4c6e-b849-13afcc308fe2
             region: content
             configuration:
-              id: 'field_block:node:recipe:body'
+              id: 'field_block:node:recipe:field_description'
               label_display: ''
               formatter:
-                label: hidden
-                type: text_default
+                label: above
                 settings: {  }
                 third_party_settings: {  }
+                type: text_default
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+          ef74761b-f93b-4d45-b4ab-08435f47a1bb:
+            uuid: ef74761b-f93b-4d45-b4ab-08435f47a1bb
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_image'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+                type: image
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          f1d44bd6-add6-4bbd-828c-d63903afac43:
+            uuid: f1d44bd6-add6-4bbd-828c-d63903afac43
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_recipe_cooktime'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          159f3272-e7ed-4617-980d-6a9499ffc4c6:
+            uuid: 159f3272-e7ed-4617-980d-6a9499ffc4c6
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_recipe_ingredients'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+          8b4a38ec-52ce-465f-a039-6cc3772e9b9e:
+            uuid: 8b4a38ec-52ce-465f-a039-6cc3772e9b9e
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_recipe_preptime'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 4
+          6cb1573c-1d75-4930-be53-11267ece88c5:
+            uuid: 6cb1573c-1d75-4930-be53-11267ece88c5
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_recipe_instructions'
+              label_display: ''
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 5
+          fa86fe19-070e-490c-b69c-28a55dd0931c:
+            uuid: fa86fe19-070e-490c-b69c-28a55dd0931c
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_recipe_yield'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 6
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
+  field_description:
     weight: 101
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_recipe_cooktime:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_recipe_ingredients:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_recipe_instructions:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_recipe_preptime:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_recipe_yield:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   links:
     weight: 100

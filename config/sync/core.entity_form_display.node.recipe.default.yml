@@ -3,10 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.recipe.body
+    - field.field.node.recipe.field_description
+    - field.field.node.recipe.field_image
+    - field.field.node.recipe.field_recipe_cooktime
+    - field.field.node.recipe.field_recipe_ingredients
+    - field.field.node.recipe.field_recipe_instructions
+    - field.field.node.recipe.field_recipe_preptime
+    - field.field.node.recipe.field_recipe_yield
+    - image.style.thumbnail
     - node.type.recipe
   module:
     - content_moderation
+    - image
     - path
     - text
 id: node.recipe.default
@@ -14,21 +22,67 @@ targetEntityType: node
 bundle: recipe
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_description:
+    weight: 121
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image:
+    weight: 122
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_recipe_cooktime:
+    weight: 123
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_recipe_ingredients:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_recipe_instructions:
+    weight: 126
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_recipe_preptime:
+    weight: 125
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_recipe_yield:
+    weight: 127
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   langcode:
     type: language_select
     weight: 2

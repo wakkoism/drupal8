@@ -1,22 +1,22 @@
-uuid: ba127d79-e2ca-4314-858a-a373604bb3a2
+uuid: a7ef22d4-661e-4990-96fc-7ce7ba25b064
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_description
     - node.type.recipe
   module:
     - text
-id: node.recipe.body
-field_name: body
+id: node.recipe.field_description
+field_name: field_description
 entity_type: node
 bundle: recipe
-label: Body
+label: Description
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
 field_type: text_with_summary
