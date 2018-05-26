@@ -21,8 +21,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          8f3bc77d-125b-476d-8f53-eb9cb7867b91:
-            uuid: 8f3bc77d-125b-476d-8f53-eb9cb7867b91
+          088d760c-2ec3-475a-b50c-2d647ceb8b7d:
+            uuid: 088d760c-2ec3-475a-b50c-2d647ceb8b7d
             region: content
             configuration:
               id: 'field_block:node:article:body'
@@ -36,9 +36,9 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 1
-          8036337d-e750-4b1c-aba4-a757bc3f2e5e:
-            uuid: 8036337d-e750-4b1c-aba4-a757bc3f2e5e
+            weight: 0
+          ce9f5e18-a17c-478a-b354-9213aea3cb26:
+            uuid: ce9f5e18-a17c-478a-b354-9213aea3cb26
             region: content
             configuration:
               id: 'field_block:node:article:field_tags'
@@ -52,7 +52,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 2
+            weight: 1
 _core:
   default_config_hash: 4NcL2hSQZBpJbYtNuh5jC6kyQTcAc1m5bQpTegEWEso
 id: node.article.teaser

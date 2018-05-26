@@ -17,8 +17,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          39e010c9-31bd-4069-8e19-05119e18372a:
-            uuid: 39e010c9-31bd-4069-8e19-05119e18372a
+          ba999383-38fd-463c-90bf-95cf3bf9a5c9:
+            uuid: ba999383-38fd-463c-90bf-95cf3bf9a5c9
             region: content
             configuration:
               id: 'field_block:user:user:user_picture'

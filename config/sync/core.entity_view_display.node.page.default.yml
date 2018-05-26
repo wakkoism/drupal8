@@ -17,30 +17,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          a508afe1-5ccb-4008-a377-788d1f785005:
-            uuid: a508afe1-5ccb-4008-a377-788d1f785005
-            region: content
-            configuration:
-              id: 'field_block:node:page:title'
-              label: Title
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          53a74a5f-56cb-42a7-87c7-709df9bf7cf1:
-            uuid: 53a74a5f-56cb-42a7-87c7-709df9bf7cf1
+          af2d92d5-b628-43c0-8653-8a7a7cc41fcb:
+            uuid: af2d92d5-b628-43c0-8653-8a7a7cc41fcb
             region: content
             configuration:
               id: 'field_block:node:page:body'
@@ -54,25 +32,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          2680434b-2a77-4929-85b7-d0e3259304de:
-            uuid: 2680434b-2a77-4929-85b7-d0e3259304de
-            region: content
-            configuration:
-              id: 'field_block:node:page:nid'
-              label: ID
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: number_integer
-                settings:
-                  thousand_separator: ''
-                  prefix_suffix: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default

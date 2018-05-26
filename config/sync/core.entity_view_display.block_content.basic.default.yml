@@ -16,8 +16,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          30e18ad7-2cfd-4567-8b68-0da7d28f1bcc:
-            uuid: 30e18ad7-2cfd-4567-8b68-0da7d28f1bcc
+          8045fca6-26a7-40f2-b19d-07df143c825a:
+            uuid: 8045fca6-26a7-40f2-b19d-07df143c825a
             region: content
             configuration:
               id: 'field_block:block_content:basic:body'
