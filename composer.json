@@ -25,6 +25,7 @@
         "drupal/devel": "~1.0",
         "drupal/entity_browser": "^1.4",
         "drupal/paragraphs": "^1.2",
+        "drupal/pathauto": "^1.2",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",

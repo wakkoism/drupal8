@@ -12,7 +12,7 @@ bundle: recipe
 label: CookTime
 description: 'The time it takes to actually cook the dish in minutes'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -14,7 +14,7 @@ bundle: recipe
 label: 'Recipe Instructions'
 description: 'The steps to make the dish'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

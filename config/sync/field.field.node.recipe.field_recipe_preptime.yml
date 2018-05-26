@@ -12,7 +12,7 @@ bundle: recipe
 label: 'Preparation Time'
 description: 'Preparation time in minute(s)'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

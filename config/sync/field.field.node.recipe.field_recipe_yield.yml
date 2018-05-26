@@ -12,7 +12,7 @@ bundle: recipe
 label: 'Recipe Yield'
 description: 'The quantity produce by the recipe (for example, number of people served, number of servings, and so on).'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
