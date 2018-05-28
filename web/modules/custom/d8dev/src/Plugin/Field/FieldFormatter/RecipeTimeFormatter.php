@@ -33,16 +33,15 @@ class RecipeTimeFormatter extends FormatterBase {
 
       $minutes_gcd = $this->gcd($minutes, 60);
 
-      $minutes_fraction = $minutes / $minutes_gcd . '/' . 60 / $minutes_gcd;
-
-      $markup = $hours > 0
-        ? $hours . ' and ' . $minutes_fraction . 'hours'
-        : $minutes_fraction . ' hours';
       // The text value has no text format assigned to it, so the user input
       // should equal the output, including newlines.
       $elements[$delta] = [
         '#theme' => 'recipe_time_display',
-        '#value' => $markup,
+        '#hours' => $hours,
+        '#fraction' => [
+          'top' => $minutes / $minutes_gcd,
+          'bottom' => 60 / $minutes_gcd,
+        ],
       ];
     }
 
@@ -59,7 +58,7 @@ class RecipeTimeFormatter extends FormatterBase {
    */
   private function gcd($a, $b) {
     $b = ($a == 0) ? 0 : $b;
-    return ($a % $b ) ? $this->gcd($b, abs($a - $b)) : $b;
+    return ($a % $b) ? $this->gcd($b, abs($a - $b)) : $b;
   }
 
 }

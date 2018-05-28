@@ -12,7 +12,11 @@ function d8dev_theme() {
   return [
     'recipe_time_display' => [
       'variables' => [
-        'value' => NULL,
+        'hours' => NULL,
+        'fraction' => [
+          'top' => NULL,
+          'bottom' => NULL,
+        ],
       ],
       'template' => 'recipe-time-display',
     ],

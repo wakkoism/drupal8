@@ -1,1 +1,5 @@
-{{ value }}
+{% if hours > 0 %}
+  {{ hours }} and <sup>{{ fraction.top }}</sup>&frasl;<sub>{{ fraction.bottom }}</sub> hours
+{% else %}
+  <sup>{{ fraction.top }}</sup>&frasl;<sub>{{ fraction.bottom }}</sub> hours
+{% endif %}
