@@ -38,11 +38,13 @@ class RecipeTimeFormatter extends FormatterBase {
       $elements[$delta] = [
         '#theme' => 'recipe_time_display',
         '#hours' => $hours,
-        '#fraction' => [
+      ];
+      if ($minutes_gcd !== FALSE) {
+        $elements[$delta]['#fraction'] = [
           'top' => $minutes / $minutes_gcd,
           'bottom' => 60 / $minutes_gcd,
-        ],
-      ];
+        ];
+      }
     }
 
     return $elements;
@@ -58,6 +60,10 @@ class RecipeTimeFormatter extends FormatterBase {
    */
   private function gcd($a, $b) {
     $b = ($a == 0) ? 0 : $b;
+    // Avoid non zero numbers.
+    if ($b === 0) {
+      return FALSE;
+    }
     return ($a % $b) ? $this->gcd($b, abs($a - $b)) : $b;
   }
 
