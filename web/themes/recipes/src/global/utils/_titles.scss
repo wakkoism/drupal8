@@ -1,0 +1,13 @@
+// HeaderTitle (this will be the title of your component)
+//
+// Large, **in charge**, and centered. (this is the description of your component. you can use markdown in here.)
+//
+// Markup (define the markup to be used in your styleguide):
+// <div class="main-content"><h3>A Post Title</h3></div>
+//
+// Styleguide Components.article.post-title 
+// (ꜛ this controls the organization of your style guide. Here, I'm filing this component inside Components / Article / Post Title) 
+.main-content h3 {
+  font-size: 50px;
+  width: percentage(5/7);
+}
