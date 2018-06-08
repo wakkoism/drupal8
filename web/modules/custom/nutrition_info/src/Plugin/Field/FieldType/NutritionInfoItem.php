@@ -177,6 +177,7 @@ class NutritionInfoItem extends FieldItemBase {
         break;
       }
     }
+
     return $empty;
   }
 

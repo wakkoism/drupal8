@@ -24,6 +24,7 @@
         "drupal/core": "~8.5.1",
         "drupal/devel": "~1.0",
         "drupal/entity_browser": "^1.4",
+        "drupal/field_group": "3.x-dev",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
         "drush/drush": "^9.0.0",

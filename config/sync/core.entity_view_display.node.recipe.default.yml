@@ -10,11 +10,13 @@ dependencies:
     - field.field.node.recipe.field_recipe_instructions
     - field.field.node.recipe.field_recipe_preptime
     - field.field.node.recipe.field_recipe_yield
+    - field.field.node.recipe.field_testing
     - node.type.recipe
   module:
     - image
     - layout_builder
     - layout_discovery
+    - nutrition_info
     - text
     - user
 third_party_settings:
@@ -137,6 +139,21 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 6
+          df3ca76a-25a5-4e84-ac95-6dfe2a079c31:
+            uuid: df3ca76a-25a5-4e84-ac95-6dfe2a079c31
+            region: content
+            configuration:
+              id: 'field_block:node:recipe:field_testing'
+              label_display: ''
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: nutritioninfo_formatter
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 7
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -198,6 +215,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_testing:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: nutritioninfo_formatter
     region: content
   links:
     weight: 100

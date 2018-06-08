@@ -10,13 +10,32 @@ dependencies:
     - field.field.node.recipe.field_recipe_instructions
     - field.field.node.recipe.field_recipe_preptime
     - field.field.node.recipe.field_recipe_yield
+    - field.field.node.recipe.field_testing
     - image.style.thumbnail
     - node.type.recipe
   module:
     - content_moderation
+    - field_group
     - image
+    - nutrition_info
     - path
     - text
+third_party_settings:
+  field_group:
+    group_nutrition_information:
+      children:
+        - field_testing
+      parent_name: ''
+      weight: 17
+      format_type: fieldset
+      format_settings:
+        label: 'Nutrition Information'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Nutrition Information'
+      region: content
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -24,12 +43,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_description:
-    weight: 121
+    weight: 10
     settings:
       rows: 9
       summary_rows: 3
@@ -38,7 +57,7 @@ content:
     type: text_textarea_with_summary
     region: content
   field_image:
-    weight: 122
+    weight: 11
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -46,14 +65,14 @@ content:
     type: image_image
     region: content
   field_recipe_cooktime:
-    weight: 123
+    weight: 12
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_recipe_ingredients:
-    weight: 124
+    weight: 13
     settings:
       size: 60
       placeholder: ''
@@ -61,7 +80,7 @@ content:
     type: string_textfield
     region: content
   field_recipe_instructions:
-    weight: 126
+    weight: 15
     settings:
       rows: 5
       placeholder: ''
@@ -69,36 +88,42 @@ content:
     type: text_textarea
     region: content
   field_recipe_preptime:
-    weight: 125
+    weight: 14
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_recipe_yield:
-    weight: 127
+    weight: 16
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_testing:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: nutritioninfo_default
+    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 8
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -106,34 +131,39 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 5
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
