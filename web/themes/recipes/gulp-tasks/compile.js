@@ -24,13 +24,6 @@ module.exports = {
     return gulp.src('./src/{global,components}/**/*.scss')
       .pipe(sass({ outputStyle: 'nested' })
         .on('error', sass.logError))
-      .pipe(prefix({
-        browsers: [
-          'last 6 versions',
-          'IE >= 10'
-        ],
-        cascade: false
-      }))
       .pipe(rename(function (path) {
         path.dirname = '';
         return path;

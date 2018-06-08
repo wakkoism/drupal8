@@ -21,16 +21,13 @@ var runSequence = require('run-sequence');
 var taskCompile = require('./gulp-tasks/compile.js');
 var taskMove = require('./gulp-tasks/move.js');
 var taskLint = require('./gulp-tasks/lint.js');
-var taskCompress = require('./gulp-tasks/compress.js');
-var taskClean = require('./gulp-tasks/clean.js');
-var taskStyleGuide = require('./gulp-tasks/styleguide.js');
-var taskConcat = require('./gulp-tasks/concat.js');
+
 //=======================================================
 // Compile Our Sass and JS
 // We also move some files if they don't need
 // to be compiled.
 //=======================================================
-gulp.task('compile', ['compile:sass', 'compile:js', 'move:js']);
+gulp.task('compile', ['compile:sass']);
 
 // Compile Sass
 gulp.task('compile:sass', function () {
@@ -39,14 +36,14 @@ gulp.task('compile:sass', function () {
 
 // Compile JavaScript ES2015 to ES5.
 gulp.task('compile:js', function () {
-  return taskCompile.js();
+  //return taskCompile.js();
 });
 
 // If some JS components aren't es6 we want to simply move them
 // into the dist folder. This allows us to clean the dist/js
 // folder on build.
 gulp.task('move:js', function () {
-  return taskMove.js();
+  //return taskMove.js();
 });
 
 //=======================================================
