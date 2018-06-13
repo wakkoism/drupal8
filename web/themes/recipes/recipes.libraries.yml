@@ -6,6 +6,7 @@ global-styling:
 delicious:
   version: 1.0
   js:
-    dist/js/delcious.js: {}
+    dist/js/delicious.js: {}
   dependencies:
+    - core/drupal
     - core/jquery

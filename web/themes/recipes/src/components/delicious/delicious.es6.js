@@ -5,6 +5,8 @@
 
 var delicious = (function() {
 
+  'use strict';
+
   /**
    * Public object.
    * @type {{}}
@@ -22,8 +24,12 @@ var delicious = (function() {
    * Bind the recipe content click event.
    */
   var bindRecipeContentEvent = () => {
+    let timesClicked = 0;
     $deliciousContent.on('click', () => {
-      deliciousAlert();
+      if (timesClicked === 0 ) {
+        deliciousAlert();
+        timesClicked++;
+      }
     });
   };
 
