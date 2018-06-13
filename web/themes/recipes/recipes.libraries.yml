@@ -3,3 +3,9 @@ global-styling:
   css:
     theme:
       dist/css/global.css: {}
+delicious:
+  version: 1.0
+  js:
+    dist/js/delcious.js: {}
+  dependencies:
+    - core/jquery

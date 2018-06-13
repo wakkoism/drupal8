@@ -27,7 +27,7 @@ var taskLint = require('./gulp-tasks/lint.js');
 // We also move some files if they don't need
 // to be compiled.
 //=======================================================
-gulp.task('compile', ['compile:sass']);
+gulp.task('compile', ['compile:sass', 'compile:js']);
 
 // Compile Sass
 gulp.task('compile:sass', function () {
@@ -36,7 +36,7 @@ gulp.task('compile:sass', function () {
 
 // Compile JavaScript ES2015 to ES5.
 gulp.task('compile:js', function () {
-  //return taskCompile.js();
+  return taskCompile.js();
 });
 
 // If some JS components aren't es6 we want to simply move them
