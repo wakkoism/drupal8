@@ -30,6 +30,7 @@ class NutritionInfoItem extends FieldItemBase {
       'calories' => [
         'label' => t('Calories'),
         'description' => t('The number of calories.'),
+        'priority' => 1,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -39,6 +40,7 @@ class NutritionInfoItem extends FieldItemBase {
       'carbohydrate_content' => [
         'label' => t('Carbohydrate Content'),
         'description' => t('The number of grams of carbohydrates.'),
+        'priority' => 1,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -48,6 +50,7 @@ class NutritionInfoItem extends FieldItemBase {
       'cholesterol_content' => [
         'label' => t('Cholesterol Content'),
         'description' => t('The number of milligrams of cholesterol.'),
+        'priority' => 1,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -57,6 +60,7 @@ class NutritionInfoItem extends FieldItemBase {
       'fat_content' => [
         'label' => t('Fat Content'),
         'description' => t('The number of grams of fat.'),
+        'priority' => 2,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -65,7 +69,8 @@ class NutritionInfoItem extends FieldItemBase {
       ],
       'fiber_content' => [
         'label' => t('Fiber Content'),
-        'description' => t('The number of grams of fiber..'),
+        'description' => t('The number of grams of fiber.'),
+        'priority' => 2,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -75,6 +80,7 @@ class NutritionInfoItem extends FieldItemBase {
       'protein_content' => [
         'label' => t('Protein Content'),
         'description' => t('The number of grams of protein.'),
+        'priority' => 1,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -84,6 +90,7 @@ class NutritionInfoItem extends FieldItemBase {
       'saturated_fat_content' => [
         'label' => t('Saturated Fat Content'),
         'description' => t('he number of grams of saturated fat.'),
+        'priority' => 3,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -93,6 +100,7 @@ class NutritionInfoItem extends FieldItemBase {
       'serving_size' => [
         'label' => t('Serving size'),
         'description' => t('The serving size, in terms of the number of volume or mass.'),
+        'priority' => 1,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -102,6 +110,7 @@ class NutritionInfoItem extends FieldItemBase {
       'sodium_content' => [
         'label' => t('Sodium Content'),
         'description' => t('The number of milligrams of sodium.'),
+        'priority' => 3,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -111,6 +120,7 @@ class NutritionInfoItem extends FieldItemBase {
       'sugar_content' => [
         'label' => t('Sugar Content'),
         'description' => t('he number of grams of sugar.'),
+        'priority' => 3,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -120,6 +130,7 @@ class NutritionInfoItem extends FieldItemBase {
       'trans_fat_content' => [
         'label' => t('Trans Fat Content'),
         'description' => t('The number of grams of trans fat.'),
+        'priority' => 3,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,
@@ -129,6 +140,7 @@ class NutritionInfoItem extends FieldItemBase {
       'unsaturated_fat_content' => [
         'label' => t('Unsaturated fat Content'),
         'description' => t('The number of grams of unsaturated fat.'),
+        'priority' => 2,
         'schema' => [
           'type' => 'varchar',
           'length' => 256,

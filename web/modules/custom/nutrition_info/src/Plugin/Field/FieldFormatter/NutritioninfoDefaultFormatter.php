@@ -26,12 +26,31 @@ class NutritioninfoDefaultFormatter extends FormatterBase {
     $elements = [];
     $field_property = NutritionInfoItem::nutritionItemPropertyField();
     $set_headers = FALSE;
+
     foreach ($items as $delta => $item) {
       $data = [];
       foreach ($field_property as $field_name => $property) {
         $data[] = $item->{$field_name};
         if (!$set_headers) {
-          $headers[] = $property['label'];
+          $priority_class = '';
+
+          switch ($property['priority']) {
+            case 2:
+              $priority_class = ['priority', 'priority-medium'];
+              break;
+
+            case 3:
+              $priority_class = ['priority', 'priority-low'];
+              break;
+
+            default:
+              $priority_class = [];
+              break;
+          }
+          $headers[] = [
+            'data' => $property['label'],
+            'class' => $priority_class,
+          ];
         }
       }
       $set_headers = TRUE;

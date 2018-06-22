@@ -3,6 +3,7 @@ global-styling:
   css:
     theme:
       dist/css/global.css: {}
+      dist/css/delicious.css: {}
 delicious:
   version: 1.0
   js:
