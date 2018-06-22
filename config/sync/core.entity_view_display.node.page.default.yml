@@ -6,32 +6,8 @@ dependencies:
     - field.field.node.page.body
     - node.type.page
   module:
-    - layout_builder
-    - layout_discovery
     - text
     - user
-third_party_settings:
-  layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          af2d92d5-b628-43c0-8653-8a7a7cc41fcb:
-            uuid: af2d92d5-b628-43c0-8653-8a7a7cc41fcb
-            region: content
-            configuration:
-              id: 'field_block:node:page:body'
-              label_display: ''
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default

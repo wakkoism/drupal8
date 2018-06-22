@@ -7,33 +7,8 @@ dependencies:
     - field.field.node.page.body
     - node.type.page
   module:
-    - layout_builder
-    - layout_discovery
     - text
     - user
-third_party_settings:
-  layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          875cc828-fa15-43e9-9c04-978837de164c:
-            uuid: 875cc828-fa15-43e9-9c04-978837de164c
-            region: content
-            configuration:
-              id: 'field_block:node:page:body'
-              label_display: ''
-              formatter:
-                label: hidden
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
 _core:
   default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY
 id: node.page.teaser

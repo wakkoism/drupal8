@@ -10,49 +10,8 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
-    - layout_builder
-    - layout_discovery
     - text
     - user
-third_party_settings:
-  layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          088d760c-2ec3-475a-b50c-2d647ceb8b7d:
-            uuid: 088d760c-2ec3-475a-b50c-2d647ceb8b7d
-            region: content
-            configuration:
-              id: 'field_block:node:article:body'
-              label_display: ''
-              formatter:
-                type: text_summary_or_trimmed
-                settings:
-                  trim_length: 600
-                third_party_settings: {  }
-                label: hidden
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
-          ce9f5e18-a17c-478a-b354-9213aea3cb26:
-            uuid: ce9f5e18-a17c-478a-b354-9213aea3cb26
-            region: content
-            configuration:
-              id: 'field_block:node:article:field_tags'
-              label_display: ''
-              formatter:
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
-                label: above
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
 _core:
   default_config_hash: 4NcL2hSQZBpJbYtNuh5jC6kyQTcAc1m5bQpTegEWEso
 id: node.article.teaser

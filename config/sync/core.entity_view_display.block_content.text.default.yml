@@ -6,31 +6,7 @@ dependencies:
     - block_content.type.text
     - field.field.block_content.text.body
   module:
-    - layout_builder
-    - layout_discovery
     - text
-third_party_settings:
-  layout_builder:
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          4d82f8f5-7934-47bc-8e1e-cbb594027bef:
-            uuid: 4d82f8f5-7934-47bc-8e1e-cbb594027bef
-            region: content
-            configuration:
-              id: 'field_block:block_content:text:body'
-              label_display: ''
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 0
 id: block_content.text.default
 targetEntityType: block_content
 bundle: text

@@ -36,6 +36,38 @@ third_party_settings:
         required_fields: false
       label: 'Nutrition Information'
       region: content
+    group_preparation:
+      children:
+        - field_recipe_preptime
+        - field_recipe_ingredients
+      parent_name: ''
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: 'preparation recipe- phase'
+        effect: none
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Preparation
+      region: content
+    group_cooking:
+      children:
+        - field_recipe_cooktime
+        - field_recipe_yield
+      parent_name: ''
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Cooking
+      region: content
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -72,7 +104,7 @@ content:
     type: number
     region: content
   field_recipe_ingredients:
-    weight: 13
+    weight: 15
     settings:
       size: 60
       placeholder: ''
@@ -80,7 +112,7 @@ content:
     type: string_textfield
     region: content
   field_recipe_instructions:
-    weight: 15
+    weight: 13
     settings:
       rows: 5
       placeholder: ''
@@ -95,7 +127,7 @@ content:
     type: number
     region: content
   field_recipe_yield:
-    weight: 16
+    weight: 13
     settings:
       size: 60
       placeholder: ''

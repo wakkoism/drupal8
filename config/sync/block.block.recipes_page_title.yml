@@ -1,0 +1,20 @@
+uuid: c148ee4a-064c-4037-8f29-1d862263e397
+langcode: en
+status: true
+dependencies:
+  theme:
+    - recipes
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: recipes_page_title
+theme: recipes
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

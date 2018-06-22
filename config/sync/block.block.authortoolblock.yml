@@ -1,0 +1,36 @@
+uuid: b056e88b-2147-4bd9-8117-1154f30445e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - author_tool
+    - ctools
+    - user
+  theme:
+    - recipes
+id: authortoolblock
+theme: recipes
+region: sidebar_first
+weight: -7
+provider: null
+plugin: author_tool_block
+settings:
+  id: author_tool_block
+  label: 'Author tool block'
+  provider: author_tool
+  label_display: visible
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      recipe: recipe
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
