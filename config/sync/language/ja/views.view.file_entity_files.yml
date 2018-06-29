@@ -1,0 +1,88 @@
+description: ファイルの検索と管理。
+display:
+  default:
+    display_title: マスター
+    display_options:
+      exposed_form:
+        options:
+          submit_button: フィルター
+          reset_button_label: リセット
+          exposed_sorts_label: 並び替え基準
+          sort_asc_label: 昇順
+          sort_desc_label: 降順
+      pager:
+        options:
+          tags:
+            previous: '‹ 前'
+            next: '次 ›'
+          expose:
+            items_per_page_label: ページ毎の件数
+            items_per_page_options_all_label: '- 全て -'
+            offset_label: オフセット
+      fields:
+        fid:
+          label: FID
+        filename:
+          label: 名前
+        type:
+          label: タイプ
+        filesize:
+          label: サイズ
+        status:
+          label: 状態
+        changed:
+          label: 変更済
+          separator: ', '
+        created:
+          label: 作成
+          separator: ', '
+        count:
+          label: 利用場所
+        operations:
+          label: 操作
+      filters:
+        filename:
+          expose:
+            label: ファイル名
+        status:
+          expose:
+            label: 状態
+        type:
+          expose:
+            label: タイプ
+      title: ファイル
+      empty:
+        area_text_custom:
+          content: 利用可能なファイルがありません。
+  overview:
+    display_title: ファイルの概要
+    display_options:
+      menu:
+        title: ファイル
+  usage:
+    display_title: ファイルの用途
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ 前'
+            next: '次 ›'
+          expose:
+            items_per_page_label: ページ毎の件数
+            items_per_page_options_all_label: '- 全て -'
+            offset_label: オフセット
+      fields:
+        entity_label:
+          label: エンティティ
+        type:
+          label: エンティティタイプ
+        module:
+          label: モジュールの登録
+        count:
+          label: 使用回数
+      title: ファイルの用途
+      arguments:
+        fid:
+          exception:
+            title: すべて
+          title: '{{ arguments.fid }}のファイル使用情報'

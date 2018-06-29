@@ -6,3 +6,11 @@
 .preparation {
   background-color: #e7e7e7;
 }
+
+ul.recipe-images ul {
+  float: none !important;
+  li {
+    display: inline-flex;
+    padding: 6px;
+  }
+}

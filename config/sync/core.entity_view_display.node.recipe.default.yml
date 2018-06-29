@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.recipe.field_recipe_preptime
     - field.field.node.recipe.field_recipe_yield
     - field.field.node.recipe.field_testing
+    - image.style.medium
     - node.type.recipe
   module:
     - image
@@ -31,9 +32,9 @@ content:
     region: content
   field_image:
     weight: 102
-    label: above
+    label: hidden
     settings:
-      image_style: ''
+      image_style: medium
       image_link: ''
     third_party_settings: {  }
     type: image
