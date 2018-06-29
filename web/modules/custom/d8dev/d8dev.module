@@ -22,3 +22,10 @@ function d8dev_theme() {
     ],
   ];
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function d8dev_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'd8dev/d8dev';
+}

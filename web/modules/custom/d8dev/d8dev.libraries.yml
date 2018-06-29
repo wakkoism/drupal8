@@ -1,0 +1,5 @@
+d8dev:
+  version: 1.x
+  css:
+    theme:
+      styles/d8dev.css: {}

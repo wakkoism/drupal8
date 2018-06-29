@@ -1,0 +1,14 @@
+uuid: 4b197703-a222-4035-af3d-63f4d4302680
+langcode: en
+status: true
+dependencies: {  }
+name: small
+label: 'small (160x120)'
+effects:
+  2042435b-3b83-4a4e-84a8-f914a406d6b9:
+    uuid: 2042435b-3b83-4a4e-84a8-f914a406d6b9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 160
+      height: 120
