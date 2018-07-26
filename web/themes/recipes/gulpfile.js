@@ -51,6 +51,9 @@ gulp.task('move:js', function () {
 //=======================================================
 gulp.task('lint', ['lint:sass', 'lint:js']);
 
+
+gulp.task('default', ['compile']);
+
 // Lint Sass based on .sass-lint.yml config.
 gulp.task('lint:sass', function () {
   return taskLint.sass();

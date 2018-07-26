@@ -5,6 +5,8 @@
  * Custom D8 Module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_theme().
  */
@@ -28,4 +30,13 @@ function d8dev_theme() {
  */
 function d8dev_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'd8dev/d8dev';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function d8dev_form_contact_message_feedback_form_alter(&$form, FormStateInterface $form_state) {
+
+  $form['name']['#attributes']['placeholder'] = [t('Please enter your first and last name.')];
+  $form['mail']['#attributes']['placeholder'] = [t('Please enter your email.')];
 }
