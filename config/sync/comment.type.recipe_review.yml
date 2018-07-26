@@ -1,0 +1,8 @@
+uuid: 5eecff33-b610-4239-90b7-c6d590466fa7
+langcode: en
+status: true
+dependencies: {  }
+id: recipe_review
+label: 'Recipe Review'
+target_entity_type_id: node
+description: ''

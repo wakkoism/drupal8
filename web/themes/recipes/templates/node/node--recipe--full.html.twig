@@ -30,19 +30,6 @@
     {% endif %}
   </header>
   <div{{ content_attributes.addClass( 'node__content', 'clearfix') }}>
-    {{ content|without(
-      'field_recipe_cooktime',
-      'field_recipe_preptime',
-      'field_recipe_ingredients',
-      'field_recipe_instructions'
-    ) }}
-    <div class="preparation recipe-phase">
-      {{ content.field_recipe_preptime }}
-      {{ content.field_recipe_ingredients }}
-    </div>
-    <div class="cooking recipe-phase">
-      {{ content.field_recipe_cooktime }}
-      {{ content.field_recipe_instructions }}
-    </div>
+    {{ content }}
   </div>
 </article>

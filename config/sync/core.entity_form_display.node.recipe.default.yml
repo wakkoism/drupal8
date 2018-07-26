@@ -9,11 +9,13 @@ dependencies:
     - field.field.node.recipe.field_recipe_ingredients
     - field.field.node.recipe.field_recipe_instructions
     - field.field.node.recipe.field_recipe_preptime
+    - field.field.node.recipe.field_recipe_review
     - field.field.node.recipe.field_recipe_yield
     - field.field.node.recipe.field_testing
     - image.style.thumbnail
     - node.type.recipe
   module:
+    - comment
     - content_moderation
     - field_group
     - image
@@ -125,6 +127,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_recipe_review:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_recipe_yield:
     weight: 13

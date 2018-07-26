@@ -1,0 +1,11 @@
+uuid: 09351cbb-2682-4771-8e35-3a9971c2a774
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.recipe_review
+id: comment.recipe_review
+target_entity_type_id: comment
+target_bundle: recipe_review
+default_langcode: site_default
+language_alterable: false
