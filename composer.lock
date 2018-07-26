@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22712c7ddf2098867682df07878b2120",
-    "content-hash": "1ea87e2e9de32e011d2aee12da84d532",
+    "hash": "2cf19f9099b751e8c4760f80b223a05f",
+    "content-hash": "5708a132ff59e41f21e8dddd2b12cacf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3160,6 +3160,17 @@
                 "url"
             ],
             "time": "2017-03-20 17:10:46"
+        },
+        {
+            "name": "jackmoore/colorbox",
+            "version": "1.6.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "jakub-onderka/php-console-color",
