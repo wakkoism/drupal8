@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2cf19f9099b751e8c4760f80b223a05f",
-    "content-hash": "5708a132ff59e41f21e8dddd2b12cacf",
+    "hash": "c2979286aaacc6289cc0bc87a13c2143",
+    "content-hash": "165892205ca3de9372a22ce40cece5d9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -707,6 +707,17 @@
             ],
             "description": "Provides a way to patch Composer packages.",
             "time": "2017-12-07 16:16:31"
+        },
+        {
+            "name": "daemth/easychart",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/daemth/easychart.git",
+                "reference": "master"
+            },
+            "type": "drupal-library",
+            "time": "2018-03-12 23:12:05"
         },
         {
             "name": "dflydev/dot-access-configuration",
@@ -2160,6 +2171,75 @@
             }
         },
         {
+            "name": "drupal/easychart",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/easychart",
+                "reference": "8.x-3.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/easychart-8.x-3.4.zip",
+                "reference": "8.x-3.4",
+                "shasum": "6ec1848fd12b1515c16d841cc87a071883fa476c"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.4",
+                    "datestamp": "1475594996",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jan-Yves Vanhaverbeke",
+                    "homepage": "https://www.drupal.org/user/1823074",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Thomas Daem",
+                    "homepage": "https://www.drupal.org/user/591438",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Kristof De Jaeger",
+                    "homepage": "http://realize.be/",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "thomas_rz",
+                    "homepage": "https://www.drupal.org/user/1142210"
+                }
+            ],
+            "description": "A visual editor for the world's best web charting tool: Highcharts.",
+            "homepage": "https://www.drupal.org/project/easychart",
+            "keywords": [
+                "Highcharts",
+                "chart",
+                "drupal"
+            ],
+            "support": {
+                "source": "http://git.drupal.org/project/easychart.git",
+                "issues": "https://www.drupal.org/project/issues/easychart",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/entity_browser",
             "version": "1.4.0",
             "source": {
@@ -2468,6 +2548,52 @@
                 "source": "http://cgit.drupalcode.org/file_entity"
             },
             "time": "2018-04-01 20:54:55"
+        },
+        {
+            "name": "drupal/juicerio",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/juicerio",
+                "reference": "297b28bfc31ee3c578a14831d3ce1f130dd33931"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha4+1-dev",
+                    "datestamp": "1508604543",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jenlampton",
+                    "homepage": "https://www.drupal.org/user/85586"
+                },
+                {
+                    "name": "laughnan",
+                    "homepage": "https://www.drupal.org/user/940324"
+                }
+            ],
+            "description": "Integration with the Juicer (juicer.io) social feed platform.",
+            "homepage": "https://www.drupal.org/project/juicerio",
+            "support": {
+                "source": "http://cgit.drupalcode.org/juicerio"
+            },
+            "time": "2017-10-21 16:46:16"
         },
         {
             "name": "drupal/paragraphs",
@@ -7946,7 +8072,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/field_group": 20,
-        "drupal/file_entity": 20
+        "drupal/file_entity": 20,
+        "drupal/juicerio": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

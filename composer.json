@@ -25,20 +25,36 @@
                     "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "daemth/easychart",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/daemth/easychart.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     ],
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
+        "daemth/easychart": "master",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/admin_toolbar": "^1.23",
         "drupal/colorbox": "^1.4",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.1",
         "drupal/devel": "~1.0",
+        "drupal/easychart": "^3.4",
         "drupal/entity_browser": "^1.4",
         "drupal/field_group": "3.x-dev",
         "drupal/file_entity": "2.x-dev",
+        "drupal/juicerio": "1.x-dev",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
         "drush/drush": "^9.0.0",
