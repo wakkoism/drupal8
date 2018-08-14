@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1791a5841e649730c7f93f091b092376",
-    "content-hash": "cf58eeb1b12d4b7c756192e7e8bef81e",
+    "hash": "9149840c4a3c8a675ae55ade822f57cf",
+    "content-hash": "74641b866c181d7e3c7810f71adfa2b0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -707,6 +707,17 @@
             ],
             "description": "Provides a way to patch Composer packages.",
             "time": "2017-12-07 16:16:31"
+        },
+        {
+            "name": "daemth/easychart",
+            "version": "4.x-dev",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/daemth/easychart/archive/4.x.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "dflydev/dot-access-configuration",
@@ -8071,6 +8082,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "daemth/easychart": 20,
         "drupal/field_group": 20,
         "drupal/file_entity": 20,
         "drupal/juicerio": 20

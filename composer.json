@@ -37,11 +37,24 @@
                     "type": "zip"
                 }
             }
+        },
+				{
+            "type": "package",
+            "package": {
+                "name": "daemth/easychart",
+                "version": "4.x-dev",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/daemth/easychart/archive/4.x.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
+        "daemth/easychart": "4.x-dev",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/admin_toolbar": "^1.23",
         "drupal/colorbox": "^1.4",
