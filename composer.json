@@ -29,13 +29,12 @@
         {
             "type": "package",
             "package": {
-                "name": "daemth/easychart",
-                "version": "master",
+                "name": "highcharts/highcharts",
+                "version": "6.1.1",
                 "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/daemth/easychart.git",
-                    "type": "git",
-                    "reference": "master"
+                "dist": {
+                    "url": "https://code.highcharts.com/zips/Highcharts-6.1.1.zip",
+                    "type": "zip"
                 }
             }
         }
@@ -43,7 +42,6 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
-        "daemth/easychart": "master",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/admin_toolbar": "^1.23",
         "drupal/colorbox": "^1.4",
@@ -58,6 +56,7 @@
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
         "drush/drush": "^9.0.0",
+        "highcharts/highcharts": "^6.1",
         "jackmoore/colorbox": "^1.6",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",

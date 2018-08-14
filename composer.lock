@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c2979286aaacc6289cc0bc87a13c2143",
-    "content-hash": "165892205ca3de9372a22ce40cece5d9",
+    "hash": "1791a5841e649730c7f93f091b092376",
+    "content-hash": "cf58eeb1b12d4b7c756192e7e8bef81e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -707,17 +707,6 @@
             ],
             "description": "Provides a way to patch Composer packages.",
             "time": "2017-12-07 16:16:31"
-        },
-        {
-            "name": "daemth/easychart",
-            "version": "master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/daemth/easychart.git",
-                "reference": "master"
-            },
-            "type": "drupal-library",
-            "time": "2018-03-12 23:12:05"
         },
         {
             "name": "dflydev/dot-access-configuration",
@@ -3286,6 +3275,17 @@
                 "url"
             ],
             "time": "2017-03-20 17:10:46"
+        },
+        {
+            "name": "highcharts/highcharts",
+            "version": "6.1.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://code.highcharts.com/zips/Highcharts-6.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "jackmoore/colorbox",
