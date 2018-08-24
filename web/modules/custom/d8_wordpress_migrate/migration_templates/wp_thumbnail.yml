@@ -1,0 +1,58 @@
+id: wp_thumbnail
+label: 'Thumbnails'
+migration_tags:
+  - Wordpress
+source:
+  plugin: wordpress_thumbnail
+  # This is WP table prefix  (custom variable)
+  # DB table example: [prefix]_posts
+  table_prefix: wp
+  constants:
+    # This path should point ot WP uploads directory.
+    source_base_path: '/var/www/wordpress.local/public/wp-content/uploads'
+    # This is directory name in Drupal where to store migrated files
+    uri_file: 'public://wp-thumbnails'
+process:
+  filename: filename
+  source_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path
+        - filepath
+    -
+      plugin: urlencode
+  uri_file:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/uri_file
+        - filename
+    -
+      plugin: urlencode
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - '@uri_file'
+  status:
+    plugin: default_value
+    default_value: 1
+  changed:
+    plugin: callback
+    callable: strtotime
+    source: post_date
+  created:
+    plugin: callback
+    callable: strtotime
+    source: post_date
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:file'
+migration_dependencies:
+  required: {}
+  optional: {}

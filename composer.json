@@ -72,6 +72,7 @@
         "drupal/juicerio": "1.x-dev",
         "drupal/libraries": "3.x-dev",
         "drupal/migrate_manifest": "^1.7",
+        "drupal/migrate_run": "1.x-dev",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
         "drupal/wp_migrate": "^1.1",

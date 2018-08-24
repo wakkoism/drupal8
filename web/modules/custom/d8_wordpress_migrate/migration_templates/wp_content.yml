@@ -1,0 +1,63 @@
+id: wp_content
+label: 'Content'
+migration_tags:
+  - Wordpress
+source:
+  plugin: wordpress_content
+  # Wordpress post type (custom variable)
+  post_type: post
+  # This is WP table prefix  (custom variable)
+  # DB table example: [prefix]_posts
+  table_prefix: wp
+process:
+  type:
+    plugin: default_value
+    default_value: article
+  'path/pathauto':
+    plugin: default_value
+    default_value: 0
+  'path/alias':
+    # This will add the following to URL aliases in Drupal
+    plugin: add_url_alias_prefix
+    # url/alias/prefix/2017/07/21/[post-title]
+    prefix: wordpress/[post-title]
+    source: path_alias
+  promote:
+    plugin: default_value
+    default_value: 0
+  sticky:
+    plugin: default_value
+    default_value: 0
+  langcode:
+    plugin: default_value
+    default_value: en
+  status:
+    plugin: default_value
+    default_value: 1
+  title: post_title
+  created:
+    plugin: callback
+    callable: strtotime
+    source: post_date
+  changed:
+    plugin: callback
+    callable: strtotime
+    source: post_modified
+  field_image:
+    -
+      plugin: migration
+      migration: wp_media
+      source: thumbnail
+    -
+      plugin: skip_on_empty
+      method: row
+  'body/summary': post_excerpt
+  'body/format':
+    plugin: default_value
+    default_value: full_html
+  'body/value': post_content
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required: {}
+  optional: {}
