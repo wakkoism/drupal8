@@ -1,0 +1,9 @@
+uuid: cb0502bb-5590-4e94-8868-9198399a5c66
+langcode: en
+status: true
+dependencies: {  }
+name: 'Post Tags'
+vid: post_format
+description: null
+hierarchy: 0
+weight: 0

@@ -1,0 +1,39 @@
+uuid: a2d5ece6-62d3-4b50-927d-c67819fb8f4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - options
+id: comment.field_how_would_you_rate_this
+field_name: field_how_would_you_rate_this
+entity_type: comment
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Would not touch it'
+    -
+      value: '1'
+      label: 'Would only try it once'
+    -
+      value: '2'
+      label: 'Give it another chance'
+    -
+      value: '3'
+      label: 'It''''s okay'
+    -
+      value: '4'
+      label: Good
+    -
+      value: '5'
+      label: Delicious
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

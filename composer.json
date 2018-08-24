@@ -37,13 +37,29 @@
                     "type": "zip"
                 }
             }
-        }
+        },
+				{
+            "type" : "package",
+            "package": {
+              "name": "google/charts",
+              "version": "45",
+              "type": "drupal-library",
+              "extra": {
+                "installer-name": "google_charts"
+              },
+              "dist": {
+                "url": "https://www.gstatic.com/charts/loader.js",
+                "type": "file"
+              }
+            }
+       }
     ],
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/admin_toolbar": "^1.23",
+        "drupal/charts": "3.x-dev",
         "drupal/colorbox": "^1.4",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.1",
@@ -60,6 +76,7 @@
         "drupal/pathauto": "^1.2",
         "drupal/wp_migrate": "^1.1",
         "drush/drush": "^9.0.0",
+        "google/charts": "^45.0",
         "highcharts/highcharts": "^6.1",
         "jackmoore/colorbox": "^1.6",
         "vlucas/phpdotenv": "^2.4",

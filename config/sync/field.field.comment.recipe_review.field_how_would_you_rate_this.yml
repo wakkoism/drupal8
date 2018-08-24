@@ -1,0 +1,21 @@
+uuid: ced4d3b7-88ec-4a69-85eb-589b8c73f7ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.recipe_review
+    - field.storage.comment.field_how_would_you_rate_this
+  module:
+    - options
+id: comment.recipe_review.field_how_would_you_rate_this
+field_name: field_how_would_you_rate_this
+entity_type: comment
+bundle: recipe_review
+label: 'How would you rate this?'
+description: 'Give your honest opinion about this recipe.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

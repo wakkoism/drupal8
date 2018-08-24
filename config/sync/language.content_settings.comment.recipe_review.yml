@@ -4,8 +4,15 @@ status: true
 dependencies:
   config:
     - comment.type.recipe_review
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: comment.recipe_review
 target_entity_type_id: comment
 target_bundle: recipe_review
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

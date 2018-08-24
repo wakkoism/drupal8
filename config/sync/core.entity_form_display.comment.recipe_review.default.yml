@@ -5,6 +5,7 @@ dependencies:
   config:
     - comment.type.recipe_review
     - field.field.comment.recipe_review.comment_body
+    - field.field.comment.recipe_review.field_how_would_you_rate_this
   module:
     - text
 id: comment.recipe_review.default
@@ -12,30 +13,27 @@ targetEntityType: comment
 bundle: recipe_review
 mode: default
 content:
-  author:
-    weight: -2
-    region: content
   comment_body:
     type: text_textarea
-    weight: 11
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_how_would_you_rate_this:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 0
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
-  subject:
-    type: string_textfield
-    weight: 10
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  author: true
+  subject: true
