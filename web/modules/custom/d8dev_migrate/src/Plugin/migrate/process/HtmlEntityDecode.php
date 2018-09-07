@@ -19,7 +19,7 @@ class HtmlEntityDecode extends ProcessPluginBase {
    * {@inheritdoc}
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-    return html_entity_decode($value);
+    return html_entity_decode($value, ENT_QUOTES);
   }
 
 }
