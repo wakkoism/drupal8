@@ -30,9 +30,9 @@ class EventCustomFields extends ProcessPluginBase {
           $dom->loadHTML($value['value']);
 
           $anchor_tag = $dom->getElementsByTagName('a');
-          if (empty($anchor_tag[0]->nodeValue)) {
+          if (!empty($anchor_tag[0]->nodeValue)) {
             return [
-              'uri' => $anchor_tag[0]->getAttribute('src'),
+              'uri' => $anchor_tag[0]->getAttribute('href'),
               'title' => $anchor_tag[0]->nodeValue,
             ];
           }
