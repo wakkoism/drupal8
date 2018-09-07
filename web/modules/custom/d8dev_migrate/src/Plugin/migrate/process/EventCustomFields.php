@@ -22,15 +22,20 @@ class EventCustomFields extends ProcessPluginBase {
 
     $field_type = $this->configuration['eventCustomFieldType'];
     if (is_array($value) && !empty($value['type'])) {
-
       switch ($value['type']) {
         // The register link.
         case 6:
-          var_dump($value);
-          return [
-            'uri' => $value['value'],
-            'title' => $value['label'],
-          ];
+          // Parse out the value
+          $dom = new \DOMDocument();
+          $dom->loadHTML($value['value']);
+
+          $anchor_tag = $dom->getElementsByTagName('a');
+          if (empty($anchor_tag[0]->nodeValue)) {
+            return [
+              'uri' => $anchor_tag[0]->getAttribute('src'),
+              'title' => $anchor_tag[0]->nodeValue,
+            ];
+          }
       }
     }
   }
