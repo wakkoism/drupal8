@@ -1,0 +1,14 @@
+uuid: 0b461a54-b06d-4b42-bfdd-16b97d7dbb44
+langcode: en
+status: true
+dependencies: {  }
+id: editor_admin
+label: 'Editor Admin'
+weight: 5
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'administer shortcuts'
+  - 'edit any article content'
+  - 'edit own article content'
+  - 'use workbench access'

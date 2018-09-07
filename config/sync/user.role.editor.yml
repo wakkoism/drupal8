@@ -1,0 +1,14 @@
+uuid: 843f2a86-f2a1-4524-a380-0abf986764ee
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'administer shortcuts'
+  - 'edit any article content'
+  - 'edit own article content'
+  - 'use workbench access'

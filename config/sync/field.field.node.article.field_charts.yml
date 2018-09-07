@@ -1,0 +1,37 @@
+uuid: 15417eda-6142-402a-9b95-1c8b3b307d37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_charts
+    - node.type.article
+    - paragraphs.paragraphs_type.charts
+  module:
+    - entity_reference_revisions
+id: node.article.field_charts
+field_name: field_charts
+entity_type: node
+bundle: article
+label: Charts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      charts: charts
+    target_bundles_drag_drop:
+      charts:
+        enabled: true
+        weight: 4
+      chart_data_points:
+        weight: 5
+        enabled: false
+      hero:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

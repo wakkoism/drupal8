@@ -1,6 +1,6 @@
 charts_default_settings:
-  library: ''
-  type: line
+  library: highcharts
+  type: donut
   title: 'Testing chart title'
   colors:
     - '#2f7ed8'

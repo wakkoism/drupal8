@@ -1,0 +1,10 @@
+uuid: f8cf1bd6-3978-4ed3-be7e-18a1143c0f89
+langcode: en
+status: true
+dependencies: {  }
+id: wordpress
+label: wordpress
+description: ''
+source_type: null
+module: null
+shared_configuration: null

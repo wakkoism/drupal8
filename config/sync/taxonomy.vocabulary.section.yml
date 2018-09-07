@@ -1,0 +1,9 @@
+uuid: b8ecb5bd-307f-4523-9f45-e471024d7749
+langcode: en
+status: true
+dependencies: {  }
+name: Section
+vid: section
+description: 'Sections that determines access'
+hierarchy: 1
+weight: 0

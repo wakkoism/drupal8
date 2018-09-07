@@ -1,98 +1,70 @@
-uuid: a88403c4-a35f-45e3-93ac-5f07798478fe
+uuid: 7c32567b-0727-407d-bdc1-f8c179add611
 langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.browse_files_modal
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_charts
-    - field.field.node.article.field_hero_banner
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
-    - node.type.article
+    - field.field.node.person.body
+    - field.field.node.person.field_faculty_id
+    - field.field.node.person.field_first_name
+    - field.field.node.person.field_last_name
+    - field.field.node.person.field_topic
+    - node.type.person
   module:
-    - comment
     - content_moderation
-    - entity_browser
-    - paragraphs
     - path
     - text
-_core:
-  default_config_hash: vPb_yvhA-xuNoV_yOmOwYxGuHNRIH1CoMK2qi7BSga0
-id: node.article.default
+id: node.person.default
 targetEntityType: node
-bundle: article
+bundle: person
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
-    region: content
+    weight: 121
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
     region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_charts:
-    type: entity_reference_paragraphs
-    weight: 123
+  field_faculty_id:
+    weight: 124
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      placeholder: ''
     third_party_settings: {  }
+    type: number
     region: content
-  field_hero_banner:
-    type: entity_reference_paragraphs
+  field_first_name:
     weight: 122
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: hero
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
     region: content
-  field_image:
-    weight: 121
+  field_last_name:
+    weight: 123
     settings:
-      entity_browser: browse_files_modal
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: default
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: entity_browser_file
+    type: string_textfield
     region: content
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
-    region: content
+  field_topic:
+    weight: 125
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -135,24 +107,19 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  translation:
-    weight: 10
-    region: content
-    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5
-    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    region: content
     third_party_settings: {  }
 hidden: {  }

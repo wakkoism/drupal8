@@ -1,0 +1,65 @@
+uuid: 1b545eb4-9240-443e-89a1-c0e3fd8deb34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.chart_data_points.field_chart_data_point_label
+    - field.field.paragraph.chart_data_points.field_chart_data_point_value
+    - paragraphs.paragraphs_type.chart_data_points
+  module:
+    - content_moderation
+    - field_group
+third_party_settings:
+  field_group:
+    group_rows:
+      children:
+        - field_chart_data_point_label
+        - field_chart_data_point_value
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        formatter: closed
+        effect: none
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        speed: fast
+        attributes: ''
+      label: Rows
+      region: content
+id: paragraph.chart_data_points.default
+targetEntityType: paragraph
+bundle: chart_data_points
+mode: default
+content:
+  field_chart_data_point_label:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_chart_data_point_value:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 0
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true
