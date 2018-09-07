@@ -1,26 +1,25 @@
 <?php
 
-namespace Drupal\d8_wordpress_migrate\Plugin\migrate\process;
+namespace Drupal\d8dev_migrate\Plugin\migrate\process;
 
 use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
 
 /**
- * Add prefix to URL aliases.
+ * Decode the HTML.
  *
  * @MigrateProcessPlugin(
- *   id = "add_url_alias_prefix"
+ *   id = "html_entity_decode"
  * )
  */
-class AddUrlAliasPrefix extends ProcessPluginBase {
+class HtmlEntityDecode extends ProcessPluginBase {
 
   /**
    * {@inheritdoc}
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-    $prefix = !empty($this->configuration['prefix']) ? '/' . $this->configuration['prefix'] : '';
-    return $prefix . $value;
+    return html_entity_decode($value);
   }
 
 }

@@ -1,0 +1,70 @@
+id: event
+label: Event
+migration_tags:
+  - Goizuetta
+migration_group: goizuettas
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: https://www.trumba.com/calendars/tyling-test-calendar.json
+  ids:
+    eventID:
+      type: integer
+  item_selector: /
+  fields:
+    -
+      name: title
+      label: 'Title'
+      selector: title
+    -
+      name: eventID
+      label: 'Event ID'
+      selector: eventID
+    -
+      name: startDateTime
+      label: 'Start Date Time'
+      selector: startDateTime
+    -
+      name: endDateTime
+      label: 'End Date Time'
+      selector: endDateTime
+    -
+      name: allDay
+      label: 'All Day'
+      selector: allDay
+    -
+      name: signUpUrl
+      label: Sign Up URL
+      selector: signUpUrl
+    -
+      name: customFields
+      label: 'custom Field'
+      selector: customFields
+destination:
+  plugin: entity:node
+  bundle: events
+process:
+  type:
+    plugin: default_value
+    default_value: events
+  published:
+    plugin: default_value
+    default_value: 1
+  title:
+    source: title
+    plugin: html_entity_decode
+  field_event_id: eventID
+  field_event_start_date_time: startDateTime
+  field_event_end_date_time: endDateTime
+  field_all_day: allDay
+  field_event_sign_up_link: signUpUrl
+  field_event_register_link:
+    plugin: event_custom_fields
+    source: customFields
+    eventCustomFieldType: 6
+migration_dependencies: {}
+dependencies:
+  enforced:
+    module:
+      - d8dev_migrate

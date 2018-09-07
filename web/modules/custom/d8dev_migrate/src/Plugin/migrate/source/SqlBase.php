@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\d8_wordpress_migrate\Plugin\migrate\source;
+namespace Drupal\d8dev_migrate\Plugin\migrate\source;
 
 use Drupal\migrate_drupal\Plugin\migrate\source\DrupalSqlBase;
 use Drupal\migrate\Row;

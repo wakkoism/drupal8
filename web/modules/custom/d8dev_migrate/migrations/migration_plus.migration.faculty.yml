@@ -1,0 +1,48 @@
+id: faculty
+label: Faculty
+migration_tags:
+  - Goizuetta
+migration_group: goizuettas
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls: 'private://expert-file-sample.json'
+  item_selector: data/account/
+  ids:
+    faculty_id:
+      type: integer
+  fields:
+    -
+      name: id
+      label: Faculty ID
+      selector: /id
+    -
+      name: firstname
+      label: First Name
+      selector: /firstname
+    -
+      name: lastname
+      label: Last Name
+      selector: /lastname
+
+destination:
+  plugin: entity:node
+
+process:
+  type:
+    plugin: default_value
+    default_value: person
+
+  title: name
+  field_first_name: firstname
+  field_last_name: lastname
+  field_person_id: id
+
+  sticky:
+    plugin: default_value
+    default_value: 0
+
+  uid:
+    plugin: default_value
+    default_value: 0
