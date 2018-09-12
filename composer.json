@@ -212,7 +212,6 @@
         "drupal/migrate_tools": "^4.0",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
-        "drupal/workbench": "^1.0",
         "drupal/workbench_access": "1.x-dev",
         "drush/drush": "^9.0.0",
         "google/charts": "^45.0",

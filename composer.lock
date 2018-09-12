@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "571fe31d7a34444df854888dab8bf28b",
-    "content-hash": "410f7d6c29056f2826e15eee327c5584",
+    "hash": "0a990c6cf8d5fb6e622f84a354ab4ca4",
+    "content-hash": "2e41139b87f6d0292de207d96ca60dbf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3666,77 +3666,6 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "http://cgit.drupalcode.org/token"
-            }
-        },
-        {
-            "name": "drupal/workbench",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/workbench",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/workbench-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "513955b859f71e8ef68616f548e3af1b0a28ac16"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1503595745",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "agentrickard",
-                    "homepage": "https://www.drupal.org/user/20975"
-                },
-                {
-                    "name": "bbinkovitz",
-                    "homepage": "https://www.drupal.org/user/161263"
-                },
-                {
-                    "name": "becw",
-                    "homepage": "https://www.drupal.org/user/81067"
-                },
-                {
-                    "name": "caroltron",
-                    "homepage": "https://www.drupal.org/user/171342"
-                },
-                {
-                    "name": "robeano",
-                    "homepage": "https://www.drupal.org/user/67660"
-                },
-                {
-                    "name": "stevector",
-                    "homepage": "https://www.drupal.org/user/179805"
-                }
-            ],
-            "description": "Provides convenient dashboards and shortcuts for editors.",
-            "homepage": "https://www.drupal.org/project/workbench",
-            "support": {
-                "source": "http://cgit.drupalcode.org/workbench"
             }
         },
         {
