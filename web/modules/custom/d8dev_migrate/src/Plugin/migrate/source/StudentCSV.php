@@ -21,13 +21,6 @@ use Drupal\Component\Serialization\Json;
 class StudentCSV extends CSV {
 
   /**
-   * The XMLReader we are encapsulating.
-   *
-   * @var \XMLReader
-   */
-  protected $reader;
-
-  /**
    * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration) {
