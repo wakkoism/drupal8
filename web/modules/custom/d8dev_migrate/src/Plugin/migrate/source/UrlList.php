@@ -39,12 +39,17 @@ class UrlList extends SourcePluginExtension {
     // Read each line in the response.
     foreach ($configuration['urls'] as $url) {
       $response = file_get_contents($url);
-      if ($response) {
+      if (trim($response)) {
         $new_url = array_merge($new_url, explode(PHP_EOL, $response));
       }
     }
     // Merge each line of links into their own urls.
-    $configuration['urls'] = $new_url;
+    $configuration['urls'] = array_filter($new_url);
+
+    array_walk($configuration['urls'], function (&$value) {
+      // Replace the space with %20 in the url.
+      $value = str_replace(' ', '%20', $value);
+    });
 
     parent::__construct($configuration, $plugin_id, $plugin_definition, $migration);
 

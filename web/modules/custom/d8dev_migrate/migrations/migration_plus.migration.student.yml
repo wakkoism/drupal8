@@ -9,6 +9,7 @@ source:
   delimiter: ','
   enclosure: '"'
   header_row_count: 1
+  item_selector: '/data/system-index-block/calling-page/system-page'
   ids:
     name:
       type: string
@@ -20,7 +21,14 @@ source:
     1:
       url: 'url'
   fields:
-    - first_name
+    -
+      name: title
+      label: 'Full name'
+      selector: name
+    -
+      name: first_name
+      label: 'first name'
+      selector: system-data-structure/basic/first_main
 destination:
   plugin: entity:node
   bundle: student_alumni_profile
@@ -34,7 +42,7 @@ process:
   title:
     source: title
     plugin: html_entity_decode
-  field_first_name: firstName
+  field_first_name: first_name
 migration_dependencies: {}
 dependencies:
   enforced:
