@@ -1,0 +1,65 @@
+id: concentration
+label: 'Concentration Pages'
+migration_tags:
+  - Goizuetta
+migration_group: goizuettas
+source:
+  plugin: concentration_csv
+  path: '/data/csv/concentrations_pages.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  item_selector: '/data/system-index-block/calling-page/system-page'
+  ids:
+    name:
+      type: string
+  keys:
+    - id
+  column_names:
+    0:
+      id: 'Name'
+    1:
+      url: 'Url'
+    2:
+      program: 'Program'
+  #Fields generated from parsing the HTML file.
+  fields:
+    -
+      name: recent_electives
+      label: 'List of electives'
+destination:
+  plugin: entity:node
+  bundle: concentration
+process:
+  type:
+    plugin: default_value
+    default_value: concentration
+  status:
+    plugin: default_value
+    default_value: 1
+  title:
+    source: id
+    plugin: html_entity_decode
+  field_related_program:
+    -
+      plugin: explode
+      delimiter: ','
+      source: program
+      limit: 5
+    -
+      plugin: callback
+      callable: trim
+  field_recent_electives:
+    plugin: entity_generate
+    source: recent_electives
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: recent_electives
+    ignore_case: true
+
+migration_dependencies: {}
+dependencies:
+  enforced:
+    module:
+      - d8dev_migrate
