@@ -192,6 +192,7 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
+        "desandro/imagesloaded": "^4.1",
         "desandro/masonry": "^4.2",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/admin_toolbar": "^1.23",
@@ -216,6 +217,7 @@
         "drupal/views_field_view": "1.x-dev",
         "drupal/workbench_access": "1.x-dev",
         "drush/drush": "^9.0.0",
+        "enyo/dropzone": "^5.5",
         "google/charts": "^45.0",
         "highcharts/3d": "6.1.0",
         "highcharts/accessibility": "6.1.0",

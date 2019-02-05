@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d38a643e901533ad55ebd50f927e5de1",
-    "content-hash": "f0528d85132e20c780c5cd3fd82a21a1",
+    "hash": "6b6eb33d2746d3873bfa126d65809ed5",
+    "content-hash": "4576a9679a4237dc0af8a8e5c1ca629c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -934,6 +934,17 @@
             ],
             "description": "Provides a way to patch Composer packages.",
             "time": "2018-05-11 18:00:16"
+        },
+        {
+            "name": "desandro/imagesloaded",
+            "version": "4.1.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/desandro/imagesloaded/archive/v4.1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "desandro/masonry",
@@ -4285,6 +4296,20 @@
                 "validator"
             ],
             "time": "2018-09-25 20:59:41"
+        },
+        {
+            "name": "enyo/dropzone",
+            "version": "5.5.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/enyo/dropzone/archive/v5.5.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "dropzone"
+            }
         },
         {
             "name": "google/charts",
