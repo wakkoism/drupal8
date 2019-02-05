@@ -1,0 +1,129 @@
+<?php
+
+/**
+ * @file
+ * Help with migrating of contents.
+ */
+
+/**
+ * Helper function that makes convert csv to json.
+ *
+ * Converts mind power csv file into an easily to read JSON
+ * data for easy parsing for migration.
+ */
+function d8dev_migrate_convert_csv_to_json() {
+  $module_path = drupal_get_path('module', 'd8dev_migrate');
+  $file = $module_path . '/data/csv/mind-power-content.csv';
+
+  if (!file_exists($file) || !is_readable($file)) {
+    return;
+  }
+
+  if (($handle = fopen($file, 'r')) !== FALSE) {
+    $item_count = 0;;
+    $data = [];
+    $delimiter = ',';
+    $url = '';
+    $count = 0;
+    $page_count = 0;
+    // The component count within each components.
+    $component_row = 0;
+    // Column definition:
+    // 0 - URL
+    // 1 - Paragraph component name
+    // 2 - Field Name
+    // 3 - Field Value
+    // 4 - Field Name
+    // 5  - Field Value
+    // Repeats 2 and 3 over and over.
+    while (($rows = fgetcsv($handle, 1000, $delimiter)) !== FALSE) {
+      $count++;
+      if ($count === 1) {
+        continue;
+      }
+      // Check if the slug is the same.
+      if ($rows[0] !== $url) {
+        $url = $rows[0];
+        $data[$page_count] = [
+          'url' => $url,
+          'components' => [],
+        ];
+        $page_count++;
+      }
+      $page_index = $page_count - 1;
+
+      $new_page = FALSE;
+      $children = FALSE;
+      $field_name = '';
+      $new_component = FALSE;
+      // New page.
+      if ($rows[1] === 'Page Metadata Info') {
+        $new_page = TRUE;
+        // Set the new array for new page.
+        $component_row = 0;
+        $item_count = 0;
+      }
+      elseif (stripos($rows[1], 'item') !== FALSE) {
+        // This is an item field so it should be put into
+        // the child of the previous field.
+        $children = TRUE;
+        $children_name = $rows[1];
+        $item_count++;
+      }
+      else {
+        // Start of each component type.
+        $data[$page_index]['components'][$component_row] = [
+          'type' => $rows[1],
+          'uuid' => $page_index . '-' . $count,
+        ];
+        $new_component = TRUE;
+        $component_row++;
+        $item_count = 0;
+      }
+      foreach ($rows as $delta => $row) {
+        // Skip the URL column.
+        if ($delta < 2) {
+          continue;
+        }
+
+        if ($delta % 2 && !empty($field_name)) {
+          // This is the field value.
+          if ($new_page) {
+            $data[$page_index][$field_name] = $row;
+          }
+          else {
+            $uuid_name = $page_index . '-' . ($component_row - 1) . '-' . $rows[1];
+            // Delta includes -1 for the field name row.
+            if (!$children) {
+              $data[$page_index]['components'][$component_row - 1][$field_name] = $row;
+              $data[$page_index]['components'][$component_row - 1]['uuid'] = $uuid_name;
+            }
+            else {
+              $data[$page_index]['components'][$component_row - 1]['items'][$item_count - 1]['uuid'] = $uuid_name . '-' . ($item_count - 1) . '-' . $field_name;
+              $data[$page_index]['components'][$component_row - 1]['items'][$item_count - 1][$field_name] = $row;
+            }
+          }
+        }
+        else {
+          // This is the field name.
+          $field_name = strtolower($row);
+        }
+      }
+
+    }
+
+    fclose($handle);
+
+    file_unmanaged_save_data(json_encode($data), $module_path . '/data/json/mind-power-content.json', FILE_EXISTS_REPLACE);
+
+    $components = ['components' => []];
+    foreach ($data as $pages) {
+      foreach ($pages['components'] as $page_components) {
+        $components['components'][] = ['data' => $page_components];
+      }
+    }
+    // Write out another file for the paragraph migration.
+    file_unmanaged_save_data(json_encode($components), $module_path . '/data/json/mind-power-paragraph.json', FILE_EXISTS_REPLACE);
+  }
+  return $data;
+}

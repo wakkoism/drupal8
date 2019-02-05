@@ -198,7 +198,7 @@
         "drupal/charts": "3.x-dev",
         "drupal/colorbox": "^1.4",
         "drupal/console": "^1.0.2",
-        "drupal/core": "~8.5.1",
+        "drupal/core": "~8.6.2",
         "drupal/devel": "~1.0",
         "drupal/embed": "^1.0",
         "drupal/entity_browser": "^1.5",
@@ -213,6 +213,7 @@
         "drupal/migrate_tools": "^4.0",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.2",
+        "drupal/views_field_view": "1.x-dev",
         "drupal/workbench_access": "1.x-dev",
         "drush/drush": "^9.0.0",
         "google/charts": "^45.0",
@@ -228,7 +229,7 @@
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "~8.5.1"
+        "webflo/drupal-core-require-dev": "~8.6"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -267,6 +268,11 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.2.patch"
+            }
         }
     }
 }
