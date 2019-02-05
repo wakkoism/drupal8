@@ -271,7 +271,7 @@
         },
         "patches": {
             "drupal/core": {
-                "Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.2.patch"
+                "1356276 - Allow profiles to provide a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.x.patch"
             }
         }
     }
