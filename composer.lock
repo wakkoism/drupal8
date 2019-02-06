@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b6eb33d2746d3873bfa126d65809ed5",
-    "content-hash": "4576a9679a4237dc0af8a8e5c1ca629c",
+    "hash": "a022187dc155f779fa40cc3e273a56be",
+    "content-hash": "b2034e0dd107ab6119f4e850b1d67574",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3770,6 +3770,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "2994053 - Field Group not working on node edit inside paragraph (Version 8.3)": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

@@ -274,6 +274,9 @@
         "patches": {
             "drupal/core": {
                 "1356276 - Allow profiles to provide a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.x.patch"
+            },
+            "drupal/paragraphs": {
+                "2994053 - Field Group not working on node edit inside paragraph (Version 8.3)": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
             }
         }
     }
