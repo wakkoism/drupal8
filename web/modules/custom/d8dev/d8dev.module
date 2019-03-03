@@ -40,3 +40,23 @@ function d8dev_form_contact_message_feedback_form_alter(&$form, FormStateInterfa
   $form['name']['#attributes']['placeholder'] = [t('Please enter your first and last name.')];
   $form['mail']['#attributes']['placeholder'] = [t('Please enter your email.')];
 }
+
+/**
+ * Implements hook_field_group_form_process_build_alter().
+ */
+function d8dev_field_group_form_process_build_alter(&$element) {
+  // Hide form group within a paragraphs that can be reference multiple times.
+  if (!empty($element['group_title']) & $element['#entity_type'] === 'paragraph') {
+    if ($element['#process'][1][0]->getTargetBundle() === 'hero') {
+      $selector = $element['field_type']['widget']['#field_parents'];
+      $selector[] = 'field_type';
+      unset($selector[0]);
+      $element['group_title']['#states'] = [
+        'visible' => [
+          ':input[name="field_paragraph[' . implode('][', $selector) . ']"]' => ['value' => 'two'],
+        ],
+      ];
+    }
+
+  }
+}
