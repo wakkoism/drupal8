@@ -1,9 +1,0 @@
-uuid: 933eabcd-6efc-465c-8b8b-34f2b346e633
-langcode: en
-status: true
-dependencies: {  }
-name: 'Post Tags'
-vid: post_tag
-description: null
-hierarchy: 0
-weight: 0

@@ -1,9 +1,0 @@
-uuid: 48f12f56-5f23-43c8-871b-eee8975e017e
-langcode: en
-status: true
-dependencies: {  }
-name: Topic
-vid: topic
-description: 'Topic pull from the expert file'
-hierarchy: 0
-weight: 0

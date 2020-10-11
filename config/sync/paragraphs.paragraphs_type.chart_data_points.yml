@@ -1,9 +1,0 @@
-uuid: 332714be-a4b4-4c64-93fd-0ab85c1a02d3
-langcode: en
-status: true
-dependencies: {  }
-id: chart_data_points
-label: 'Chart data points'
-icon_uuid: null
-description: 'Used in charts paragraph.'
-behavior_plugins: {  }

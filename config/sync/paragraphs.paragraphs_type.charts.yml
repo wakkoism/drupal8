@@ -1,9 +1,0 @@
-uuid: 6df39b5e-b885-4f34-8fa9-9e6b2889b706
-langcode: en
-status: true
-dependencies: {  }
-id: charts
-label: Charts
-icon_uuid: null
-description: 'Renders the charts with the provided data point.'
-behavior_plugins: {  }

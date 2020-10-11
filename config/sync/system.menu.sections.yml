@@ -1,8 +1,0 @@
-uuid: 9d98e821-2349-44a4-88da-450801401b21
-langcode: en
-status: true
-dependencies: {  }
-id: sections
-label: Sections
-description: 'Sections use for permission'
-locked: false
