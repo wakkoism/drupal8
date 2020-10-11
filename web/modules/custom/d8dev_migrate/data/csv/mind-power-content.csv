@@ -1,0 +1,73 @@
+Slug,Component,Field name,Field Value,Field name,Field value,Field name,Field value,Field name,Field value,,
+/article/test-article,Page Metadata Info,Title,This is the page title for test article,Summary,Lorem Epsom Summary,,,,,,
+/article/test-article,Hero,Background Image,hero.jpg,CTA,"link one|http://www.gogle.com,link two|http://www.example.com",,,,,,
+/article/test-article,Statistics,Light Title,Statistics Section TItle (Optional),,,,,,,,
+/article/test-article,Statistics Item,Title,Statistic item One,Statistic Number,200,Summary,Number of students in class A,,,,
+/article/test-article,Statistics Item,Title,Statistic item Two,Statistic Number,300,Summary,Number of students in class B,,,,
+/article/test-article,Statistics Item,Title,Statistic item Three,Statistic Number,100,Summary,Number of students in class C,,,,
+/article/test-article-two,Page Metadata Info,Title,This page page title,Summary,Lorem Ipsom Summary,,,,,,
+/article/test-article-two,Full Width Breaker,Background Image,background-image-example.jpg,Light Title,Promo Title,Short Title,Optional Short title,Summary,This is a summary,,link-to-media.mov
+/article/test-article-two,Spotlight (50/50 - Promo),Light Title,Title to the side of the cotent,Summary,Summary text,position,left,,,,
+/article/test-article-two,Spotlight (50/50 - Promo),Light Title,Title to the side of the cotent,Summary,Summary text,position,right,,,,
+/article/test-article-two,Cards,Light Title,Program Section Title,CTA,SEE ALL PROGRAMS|http://www.google.com/link-to-program,,,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA One,Summary,Summary text,CTA,link|https://www.examp.com|twitter,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA Two,Summary,Summary text,CTA,link|https://www.examp.com|facebook,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA Three,Summary,Summary text,CTA,link|https://www.examp.com|instagram,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA Four,Summary,Summary text,CTA,link|https://www.examp.com|youtube,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA Five,Summary,Summary text,CTA,link|https://www.examp.com,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA Six,Summary,Summary text,CTA,link|https://www.examp.com,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA Seven,Summary,Summary text,CTA,link|https://www.examp.com,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA Eight,Summary,Summary text,CTA,link|https://www.examp.com,,,,
+/article/test-article-two,Cards Items (Promo),Light Title,One Year MBA Nine,Summary,Summary text,CTA,link|https://www.examp.com,,,,
+/article/test-article-two,Recent Events,Light Title,My light text,Bold Title,My bold text,,,,,,
+/article/test-article-two,Promo Grid (Faces of Goizueta),Light Title,Faces of Gozueta,,,,,,,,
+/article/test-article-two,Promo Grid Item,Media,promo-image-one.jpg,Summary,This is a summary text,Link,http://www.google.com,,,,
+/article/test-article-two,Promo Grid Item,Media,promo-image-one.jpg,Summary,This is a summary text,Link,http://www.google.com,,,,
+/article/test-article-two,Promo Grid Item,Media,promo-image-one.jpg,Summary,This is a summary text,Link,http://www.google.com,,,,
+/article/test-article-two,Promo Grid Item,Media,promo-image-one.jpg,Summary,This is a summary text,Link,http://www.google.com,,,,
+/article/test-article-two,Promo Grid Item,Media,promo-image--big-one.jpg,Summary,This is a summary text,Link,http://www.google.com,,,,
+/article/test-article-two,Interactive Venn,,,,,,,,,,
+/article/test-article-two,Interactive Venn Item,Title,Two Year MBA Spring Semester,Summary,This is a summary text,,,,,,
+/article/test-article-two,Interactive Venn Item,Title,Foundational Academics,Summary,This is a summary text,,,,,,
+/article/test-article-two,Tabbed Content,Light Title,Component Title Lorem Ipsum,Short Title,Optional Short Title,Subhead,Summary underneath the title with no html,,,,
+/article/test-article-two,Tab Item,Title,Monthly,Body,Content in html,,,,,,
+/article/test-article-two,Tab Item,Title,Women,Body,Content in html,,,,,,
+/article/test-article-two,Tab Item,Title,Military,Body,Content in html,,,,,,
+/article/test-article-two,Tab Item,Title,International,Body,Content in html,,,,,,
+/article/test-article-two,Tab Item,Title,Lorem Ipsom Dolor,Body,Content in html,,,,,,
+/article/test-article-three,Page Metadata Info,Title,This is the title for page three,Summary,"This is the summary containing no html for page 3.
+This is some additional line breaks that may have some commas inside of the text.
+One, two, three, four testing on summary.",,,,,,
+/article/test-article-three,FAQ,Bold Title,Frequent Ask Question,,,,,,,,
+/article/test-article-three,FAQ Items,Question,What is the answer to life?,Answer,The answer to life is how one proceed on fullfiling it.,,,,,,
+/article/test-article-three,FAQ Items,Question,What does FAQ means?,Answer,Frequently ask questions.,,,,,,
+/article/test-article-three,Featured Blogs (no fields),,,,,,,,,,
+/article/test-article-three,Featured News (no fields),,,,,,,,,,
+/article/test-article-three,Featured Carousel,Light Title,Light title for featured coursel,Autoplay,Yes,,,,,,
+/article/test-article-three,Featured Carousel Item (Promo),Light Title,Coursel items light title,Summary,Carousel item summary goes here,Subhead,This is the subhead text below the title,CTA,My Link|http://www.example.com/mylink,Image,carousel-item-01.jpg
+/article/test-article-three,Featured Carousel Item (Promo),Light Title,Coursel items light Two,Summary,Carousel item summary goes here Two,Subhead,This is the subhead text below the title,CTA,My Link|http://www.example.com/mylink-one,Image,carousel-item-02.jpg
+/article/test-article-three,Featured Carousel Item (Promo),Light Title,Coursel items light title Three,Summary,Carousel item summary goes here Three,Subhead,This is the subhead text below the title,CTA,My Link|http://www.example.com/mylink-two,Image,carousel-item-02.jpg
+/article/test-article-three,Social Wall,Light Title,This my my social wall,,,,,,,,
+/article/test-article-three,Long Text List,Light Title,My light long text title,Body,"<ul>
+  <li>Long text list item one to the left</li>
+  <li>Long text list item one to the right</li>
+<li>Long text list item one to the left</li>
+  <li>Long text list item one to the right</li>
+<li>Long text list item one to the left</li>
+  <li>Long text list item one to the right</li>
+<li>Long text list item one to the left</li>
+  <li>Long text list item one to the right</li>
+<li>Long text list item one to the left</li>
+  <li>Long text list item one to the right</li>
+<ul>",,,,,,
+/article/test-article-three,Logo Grid,Light Title,Logo,Bold Title,Grid,,,,,,
+/article/test-article-three,Logo Grid Item,Image,logo-01.jpg,Media Link,http://www.google.com/logo-01,,,,,,
+/article/test-article-three,Logo Grid Item,Image,logo-02.jpg,Media Link,http://www.google.com/logo-02,,,,,,
+/article/test-article-three,Logo Grid Item,Image,logo-03.jpg,Media Link,http://www.google.com/logo-03,,,,,,
+/article/test-article-three,Logo Grid Item,Image,logo-04.jpg,Media Link,http://www.google.com/logo-04,,,,,,
+/article/test-article-three,Logo Grid Item,Image,logo-05.jpg,Media Link,http://www.google.com/logo-05,,,,,,
+/article/test-article-three,Logo Grid Item,Image,logo-06.jpg,Media Link,http://www.google.com/logo-06,,,,,,
+/article/test-article-three,Logo Grid Item,Image,logo-07.jpg,Media Link,http://www.google.com/logo-07,,,,,,
+/article/test-article-three,Logo Grid Item,Image,logo-08.jpg,Media Link,http://www.google.com/logo-08,,,,,,
+/article/test-article-three,Recent Events,,,,,,,,,,
+/article/test-article-three,Callout,Light Title,Light Grid,Bold Title,Dark Grid,Short Title,My short title above light/dark,Subhead,This field seem to be required,,
